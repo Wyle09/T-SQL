@@ -45,29 +45,48 @@ INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSy
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller9"','20','(''UA''=''F'')','401KRON21D0','4','D','02','163','','','','');
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller10"','21','(''UA''=''F'')','401KRON21D0','10','D','02','167','','','','');
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller11"','22','(''UA''=''F'')','401KRON21D0','10','D','02','177','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPlanId"','1','(''UA''=''F'')','401KRON21D0','6','D','03','1','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvSSN"','2','(''UA''=''F'')','401KRON21D0','9','D','03','7','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvRecordType"','3','(''UA''=''F'')','401KRON21D0','3','D','03','16','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller1"','4','(''UA''=''F'')','401KRON21D0','22','D','03','19','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber1"','5','(''UA''=''F'')','401KRON21D0','3','D','03','41','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate1"','6','(''UA''=''F'')','401KRON21D0','8','D','03','44','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount1"','7','(''UA''=''F'')','401KRON21D0','10','D','03','52','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber2"','8','(''UA''=''F'')','401KRON21D0','3','D','03','62','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate2"','9','(''UA''=''F'')','401KRON21D0','8','D','03','65','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount2"','10','(''UA''=''F'')','401KRON21D0','10','D','03','73','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber3"','11','(''UA''=''F'')','401KRON21D0','3','D','03','83','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate3"','12','(''UA''=''F'')','401KRON21D0','8','D','03','86','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount3"','13','(''UA''=''F'')','401KRON21D0','10','D','03','94','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber4"','14','(''UA''=''F'')','401KRON21D0','3','D','03','104','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate4"','15','(''UA''=''F'')','401KRON21D0','8','D','03','107','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount4"','16','(''UA''=''F'')','401KRON21D0','10','D','03','115','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber5"','17','(''UA''=''F'')','401KRON21D0','3','D','03','125','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate5"','18','(''UA''=''F'')','401KRON21D0','8','D','03','128','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount5"','19','(''UA''=''F'')','401KRON21D0','10','D','03','136','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber6"','20','(''UA''=''F'')','401KRON21D0','3','D','03','146','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate6"','21','(''UA''=''F'')','401KRON21D0','8','D','03','149','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount6"','22','(''UA''=''F'')','401KRON21D0','10','D','03','157','','','','');
-INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller2"','23','(''UA''=''F'')','401KRON21D0','394','D','03','167','','','','');
+
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvPlanId"','1','(''UA''=''F'')','401KRON21D0','6','D','03','1',NULL,'Plan ID',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvSSN"','2','(''UA''=''F'')','401KRON21D0','9','D','03','7',NULL,'SSN',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"C"','3','(''DA''=''F'')','401KRON21D0','3','D','03','03',NULL,'Record Type',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"spaces"','4','(''SS''=''F'')','401KRON21D0','22','D','03','19',NULL,'Filler',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvContributionSource1"','5','(''UA''=''F'')','401KRON21D0','4','D','03','41',NULL,'Contribution Source 1',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvContributionTotalAmount1"','6','(''UA''=''F'')','401KRON21D0','10','D','03','45',NULL,'Contribution Total Amount 1',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvContributionSource2"','7','(''UA''=''F'')','401KRON21D0','4','D','03','55',NULL,'Contribution Source 2',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvContributionTotalAmount2"','8','(''UA''=''F'')','401KRON21D0','10','D','03','59',NULL,'Contribution Total Amount 2',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvContributionSource3"','9','(''UA''=''F'')','401KRON21D0','4','D','03','69',NULL,'Contribution Source 3',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvContributionTotalAmount3"','10','(''UA''=''F'')','401KRON21D0','10','D','03','73',NULL,'Contribution Total Amount 3',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"spaces"','11','(''SS''=''F'')','401KRON21D0','4','D','03','83',NULL,'Contribution Source 4',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"sapces"','12','(''SS''=''F'')','401KRON21D0','10','D','03','87',NULL,'Contribution Total Amount 4',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"spaces"','13','(''SS''=''F'')','401KRON21D0','4','D','03','97',NULL,'Contribution Source 5',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"spaces"','14','(''SS''=''F'')','401KRON21D0','10','D','03','101',NULL,'Contribution Total Amount 5',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"spaces"','15','(''SS''=''F'')','401KRON21D0','279','D','03','111',NULL,'Filler',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"1"','16','(''DA''=''F'')','401KRON21D0','1','D','03','391',NULL,'Pretax Limit Override',NULL,NULL);
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"spaces"','17','(''SS''=''F'')','401KRON21D0','108','D','03','392',NULL,'Filler',NULL,NULL);
+
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPlanId"','1','(''UA''=''F'')','401KRON21D0','6','D','04','1','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvSSN"','2','(''UA''=''F'')','401KRON21D0','9','D','04','7','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvRecordType"','3','(''UA''=''F'')','401KRON21D0','3','D','04','16','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller1"','4','(''UA''=''F'')','401KRON21D0','22','D','04','19','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber1"','5','(''UA''=''F'')','401KRON21D0','3','D','04','41','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate1"','6','(''UA''=''F'')','401KRON21D0','8','D','04','44','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount1"','7','(''UA''=''F'')','401KRON21D0','10','D','04','52','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber2"','8','(''UA''=''F'')','401KRON21D0','3','D','04','62','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate2"','9','(''UA''=''F'')','401KRON21D0','8','D','04','65','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount2"','10','(''UA''=''F'')','401KRON21D0','10','D','04','73','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber3"','11','(''UA''=''F'')','401KRON21D0','3','D','04','83','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate3"','12','(''UA''=''F'')','401KRON21D0','8','D','04','86','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount3"','13','(''UA''=''F'')','401KRON21D0','10','D','04','94','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber4"','14','(''UA''=''F'')','401KRON21D0','3','D','04','104','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate4"','15','(''UA''=''F'')','401KRON21D0','8','D','04','107','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount4"','16','(''UA''=''F'')','401KRON21D0','10','D','04','115','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber5"','17','(''UA''=''F'')','401KRON21D0','3','D','04','125','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate5"','18','(''UA''=''F'')','401KRON21D0','8','D','04','128','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount5"','19','(''UA''=''F'')','401KRON21D0','10','D','04','136','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvLoanNumber6"','20','(''UA''=''F'')','401KRON21D0','3','D','04','146','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayrollEndDate6"','21','(''UA''=''F'')','401KRON21D0','8','D','04','149','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvPayAmount6"','22','(''UA''=''F'')','401KRON21D0','10','D','04','157','','','','');
+INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"ddvFiller2"','23','(''UA''=''F'')','401KRON21D0','394','D','04','167','','','','');
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"dctTrailerNines"','1','(''UA''=''F'')','401KRON21D0','11','T','04','1','','','','');
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"dctTrailerIndicator"','2','(''UA''=''F'')','401KRON21D0','4','T','04','12','','','','');
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"dctPlanNumber"','3','(''UA''=''F'')','401KRON21D0','6','T','04','16','','','','');
@@ -91,7 +110,8 @@ IF OBJECT_ID('U_EVANSFFC_SavePath') IS NOT NULL DROP TABLE [dbo].[U_EVANSFFC_Sav
 GO
 INSERT INTO [dbo].[U_dsi_SQLClauses] (FormatCode,RecordSet,FromClause,WhereClause) VALUES ('EVANSFFC','H01','u_dsi_drv_Contribution_Headertbl','');
 INSERT INTO [dbo].[U_dsi_SQLClauses] (FormatCode,RecordSet,FromClause,WhereClause) VALUES ('EVANSFFC','D02','u_dsi_drv_Contribution_RecordBtbl','');
-INSERT INTO [dbo].[U_dsi_SQLClauses] (FormatCode,RecordSet,FromClause,WhereClause) VALUES ('EVANSFFC','D03','u_dsi_drv_Contribution_RecordDtbl','');
+INSERT INTO [dbo].[U_dsi_SQLClauses] (FormatCode,RecordSet,FromClause,WhereClause) VALUES ('EVANSFFC','D03','dbo.U_EVANSFFC_drvTbl_C_D03',NULL); -- (WC 2020-00270504)
+INSERT INTO [dbo].[U_dsi_SQLClauses] (FormatCode,RecordSet,FromClause,WhereClause) VALUES ('EVANSFFC','D04','u_dsi_drv_Contribution_RecordDtbl','');
 INSERT INTO [dbo].[U_dsi_SQLClauses] (FormatCode,RecordSet,FromClause,WhereClause) VALUES ('EVANSFFC','T04','u_dsi_drv_Contribution_Trailertbl','');
 IF OBJECT_ID('U_EVANSFFC_EEList') IS NULL
 CREATE TABLE [dbo].[U_EVANSFFC_EEList] (
@@ -138,6 +158,14 @@ select * from dbo.U_dsi_InterfaceActivityLog where formatcode = 'EVANSFFC' order
 EXEC dbo.dsi_sp_testswitchbox 'EVANSFFC', 'ONDEMAND'
 EXEC dbo.dsi_sp_testswitchbox 'EVANSFFC', 'SCHEDULED'
 EXEC dbo.dsi_sp_testswitchbox 'EVANSFFC', 'ZAP'
+
+--Update Dates
+UPDATE dbo.AscExp
+    SET expLastStartPerControl = '201912271'
+       ,expStartPerControl     = '201912271'
+       ,expLastEndPerControl   = '201912279'
+       ,expEndPerControl       = '201912279'
+WHERE expFormatCode = 'EVANSFFC';
 
 */------------------------------------------------------------------------------------
 
@@ -280,7 +308,7 @@ case when PdhDedCode in ('EXNQB','EXNQC') then '072347' else '091509' end ddvPla
 ,'' ddvFiller2
 from PDedHist b join Payreg z on PdhEEID=PrgEEID and PrgPerControl=PdhPerControl
 join emppers on eepEEID=prgEEID where PdhPerControl between @startpercontrol and @EndPerControl
-and PdhDedCode in ('401CU','401K','401KA','401M7','401M8','EXNQB','EXNQC') and eepHomeCoID<>'055PB'
+and PdhDedCode in ('401CU','401K','401KA','401M7','401M8','EXNQB','EXNQC','401KR', '401KRU') and eepHomeCoID<>'055PB' -- (WC 2020-00270504)
 group by case when PdhDedCode in ('EXNQB','EXNQC') then '072347' else '091509' end,eepSSN,PrgPeriodEndDate,PdhPerControl
 order by eepSSN
 
@@ -311,7 +339,7 @@ from  PDedHist b join Payreg z on PdhEEID=PrgEEID and PrgPerControl=PdhPerContro
 join emppers on eepEEID=prgEEID 
 join dbo.u_dsi_drv_Contribution_RecordBtbl on eepSSN=ddvSSN 
 where PdhPerControl  between @startpercontrol and @EndPerControl
-and PdhDedCode in ('401CU','401K','401KA','401M7','401M8','EXNQB','EXNQC', '401KR', '401KRU') and eepHomeCoID<>'055PB' ---and eepSSN='212909948'
+and PdhDedCode in ('401CU','401K','401KA','401M7','401M8','EXNQB','EXNQC', '401KR', '401KRU') and eepHomeCoID<>'055PB' ---and eepSSN='212909948' -- (WC 2020-00270504)
 order by eepSSN
 
 
@@ -329,6 +357,30 @@ update u_dsi_drv_Contribution_RecordBtbl set ddvContributionAmount1=case when co
 ,ddvContributionAmount2=case when convert (int,ddvContributionAmount2)=0 then NULL when convert (int,ddvContributionAmount2)<0 then dbo.[dsi_fnPadZeroS](ddvContributionAmount2,9,0) else dbo.[dsi_fnPadZeroS](ddvContributionAmount2,9,0)+'+' end
 ,ddvContributionAmount3=CASE when convert (int,ddvContributionAmount3)=0 then  NULL when convert (int,ddvContributionAmount3)<0 then dbo.[dsi_fnPadZeroS](ddvContributionAmount3,9,0)ELSE dbo.[dsi_fnPadZeroS](ddvContributionAmount3,9,0) +'+' END
 
+
+-- (WC 2020-00270504)
+IF OBJECT_ID('U_EVANSFFC_drvTbl_C_D03') IS NOT NULL 
+	DROP TABLE dbo.U_EVANSFFC_drvTbl_C_D03;
+SELECT DISTINCT
+	--drvEEID = xEEID
+	--,drvCoID = xCoID
+	ddvSSN = ''
+	-- Fields below are valid for export.
+	,drvPlanId = ddvPlanId
+	,drvSSN = ''
+	,drvContributionSource1 = MAX(ddvContributionSource1)
+	,drvContributionTotalAmount1 = CASE WHEN NULLIF(MAX(ddvContributionAmount1), '') IS NOT NULL THEN RIGHT(CONCAT('000000000', SUM(CONVERT(INT, REPLACE(ddvContributionAmount1, '+', ''))), '+'), 10) END
+	,drvContributionSource2 = MAX(ddvContributionSource2)
+	,drvContributionTotalAmount2 = CASE WHEN NULLIF(MAX(ddvContributionAmount2), '') IS NOT NULL THEN RIGHT(CONCAT('000000000', SUM(CONVERT(INT, REPLACE(ddvContributionAmount2, '+', ''))), '+'), 10) END
+	,drvContributionSource3 = MAX(ddvContributionSource3)
+	,drvContributionTotalAmount3 = CASE WHEN NULLIF(MAX(ddvContributionAmount3), '') IS NOT NULL THEN RIGHT(CONCAT('000000000', SUM(CONVERT(INT, REPLACE(ddvContributionAmount3, '+', ''))), '+'), 10) END
+INTO dbo.U_EVANSFFC_drvTbl_C_D03
+FROM dbo.U_EVANSFFC_EEList
+INNER JOIN dbo.EmpPers WITH (NOLOCK)
+	ON EepEEID = xEEID
+INNER JOIN dbo.u_dsi_drv_Contribution_RecordBtbl b WITH (NOLOCK)
+	ON b.ddvSSN = EepSSN
+GROUP BY ddvPlanId
 
 set @count=(select COUNT(*) from dbo.u_dsi_drv_Contribution_RecordBtbl)+(select COUNT(*) from dbo.u_dsi_drv_Contribution_RecordDtbl)
 
