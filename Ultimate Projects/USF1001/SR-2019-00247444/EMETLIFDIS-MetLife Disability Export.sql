@@ -643,6 +643,14 @@ BEGIN
     -- Run BDM Module
     EXEC dbo.dsi_BDM_sp_PopulateDeductionsTable @FormatCode;
 
+	-- Update benefit stop date if < the coverage effective date.
+	UPDATE bdm 
+	SET BdmBenStopDate = DATEADD(DAY, 1, BdmTVStartDate)
+	FROM dbo.U_dsi_BDM_EMETLIFDIS bdm
+	WHERE BdmBenStatus <> 'A'
+	AND BdmBenStopDate IS NOT NULL
+	AND BdmBenStopDate < BdmTVStartDate;
+
 
     --==========================================
     -- Build Driver Tables
@@ -1807,8 +1815,8 @@ ORDER BY AdfSetNumber, AdfFieldNumber;
 UPDATE dbo.AscExp
     SET expLastStartPerControl = '202001011'
        ,expStartPerControl     = '202001011'
-       ,expLastEndPerControl   = '202005239'
-       ,expEndPerControl       = '202005239'
+       ,expLastEndPerControl   = '202006239'
+       ,expEndPerControl       = '202006239'
 WHERE expFormatCode = 'EMETLIFDIS';
 
 
