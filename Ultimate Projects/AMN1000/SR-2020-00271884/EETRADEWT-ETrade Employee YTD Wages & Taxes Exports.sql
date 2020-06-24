@@ -403,8 +403,13 @@ BEGIN
 		AND PthIsEmployerTax = 'N'
 	INNER JOIN dbo.Company WITH (NOLOCK)
 		ON CmpCoID = PthCoID
+	INNER JOIN dbo.EmpTax WITH (NOLOCK)
+		ON EetEEID = PthEEID
+		AND EetCoID = PthCoID
+		AND EetTaxCode = PthTaxCode
 	LEFT JOIN dsi_vwEETRADEW_supptaxrates WITH (NOLOCK)
-		ON SupTaxCode = PthTaxCode			
+		ON SupTaxCode = PthTaxCode
+		AND SupFilingStatus = EetFilingStatus			
     WHERE @ExportCode LIKE '%YTD%'
 	AND EXISTS (SELECT 1 FROM dbo.U_EETRADEWT_EEList WITH (NOLOCK) WHERE xEEID = PthEEID AND xCoID = PthCoID)
     AND LEFT(PthPerControl,4) = LEFT(@EndPerControl,4)
@@ -433,8 +438,13 @@ BEGIN
         AND PthIsEmployerTax = 'N'
 	INNER JOIN dbo.Company WITH (NOLOCK)
 		ON CmpCoID = PthCoID
+	INNER JOIN dbo.EmpTax WITH (NOLOCK)
+		ON EetEEID = PthEEID
+		AND EetCoID = PthCoID
+		AND EetTaxCode = PthTaxCode
 	LEFT JOIN dsi_vwEETRADEW_supptaxrates WITH (NOLOCK)
-		ON SupTaxCode = PthTaxCode	
+		ON SupTaxCode = PthTaxCode
+		AND SupFilingStatus = EetFilingStatus
     WHERE @ExportCode LIKE '%YTD%'
 	AND EXISTS (SELECT 1 FROM dbo.U_EETRADEWT_YTDWithHeld_PTaxHist pth WITH (NOLOCK) WHERE pth.PthEEID = lit.PthEEID AND pth.PthCoID = lit.PthCOID)
     AND LEFT(PthPerControl,4) = LEFT(@EndPerControl,4)
@@ -838,8 +848,8 @@ ORDER BY AdfSetNumber, AdfFieldNumber;
 
 --Update Dates
 UPDATE dbo.AscExp
-    SET expLastStartPerControl = '202006031'
-       ,expStartPerControl     = '202006031'
+    SET expLastStartPerControl = '202006101'
+       ,expStartPerControl     = '202006101'
        ,expLastEndPerControl   = '202006109'
        ,expEndPerControl       = '202006109'
 WHERE expFormatCode = 'EETRADEWT';
