@@ -717,7 +717,7 @@ Unemployment is always based on work in state location.  Very few exceptions.
         ,drvStateWthldngPct = COALESCE(MAX(
 			CASE WHEN EepAddressCountry <> 'CAN' THEN 
 				CASE
-					WHEN sit1.PthMultipleSit = 'Y' AND sit1.PthStateReciprocity = 'N' THEN sit1.PthSitStatePct * 100
+					--WHEN sit1.PthMultipleSit = 'Y' AND sit1.PthStateReciprocity = 'N' THEN sit1.PthSitStatePct * 100
 					WHEN sit1.PthMultipleSit = 'Y' AND sit1.PthStateReciprocity = 'Y' THEN sit2.PthResidentStatePct * 100
 					WHEN sit1.PthMultipleSit = 'Y' THEN sit2.PthWorkInStatePct * 100
 					ELSE FitSit.PthSitSupTaxPercentOverBaseYTD * 100
