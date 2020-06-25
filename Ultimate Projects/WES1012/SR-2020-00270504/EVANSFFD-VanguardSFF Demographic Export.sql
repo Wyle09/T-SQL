@@ -260,6 +260,65 @@ select '00000000000' dhvHeaderZeroes
 ,'' dhvFiller2
 into dbo.u_dsi_drv_DemoGraphic_Headertbl
 
+-- (WC 2020-00270504)
+-- Need to get years of service for each time an employee was terminated.
+IF OBJECT_ID('U_EVANSFFD_EjhJobHist') IS NOT NULL 
+	DROP TABLE dbo.U_EVANSFFD_EjhJobHist;
+SELECT 
+	EjhEEID
+	,EjhCoID
+	,EjhEmplStatus
+	,EjhReason
+	,EjhReasonDesc
+	,EjhIsJobChange
+	,EjhJobEffDate
+	,EjhLeadEmplStatus = LEAD(EjhEmplStatus) OVER(PARTITION BY EjhEEID, EjhCoID ORDER BY EjhJobEffDate)
+	,EjhLeadJobEffDate = LEAD(EjhJobEffDate) OVER(PARTITION BY EjhEEID, EjhCoID ORDER BY EjhJobEffDate)
+	,EjhYearsOfService = NULL
+	,EjhRowNo = ROW_NUMBER() OVER(PARTITION BY EjhEEID, EjhCoID ORDER BY EjhJobEffDate)
+INTO dbo.U_EVANSFFD_EjhJobHist
+FROM (
+	SELECT DISTINCT
+		EjhEEID
+		,EjhCoID
+		,EjhEmplStatus
+		,EjhReason
+		,EjhReasonDesc = JchDesc
+		,EjhIsJobChange
+		,EjhJobEffDate
+	FROM dbo.EmpHJob WITH (NOLOCK)
+	INNER JOIN dbo.JobChRsn WITH (NOLOCK)
+		ON JchCode = EjhReason
+	WHERE EXISTS (SELECT 1 FROM dbo.U_EVANSFFD_EEList WHERE EjhEEID = xEEID AND EjhCoID = xCoID)
+	AND EjhEmplStatus = 'A'
+
+	UNION 
+
+	SELECT DISTINCT
+		EjhEEID
+		,EjhCoID
+		,EjhEmplStatus
+		,EjhReason
+		,EjhReasonDesc = TchDesc
+		,EjhIsJobChange
+		,EjhJobEffDate
+	FROM dbo.EmpHJob WITH (NOLOCK)
+	INNER JOIN dbo.TrmReasn WITH (NOLOCK)
+		ON TchCode = EjhReason
+	WHERE EXISTS (SELECT 1 FROM dbo.U_EVANSFFD_EEList WHERE EjhEEID = xEEID AND EjhCoID = xCoID)
+	AND EjhEmplStatus = 'T'
+) ejh
+
+-- Create Index
+CREATE CLUSTERED INDEX CDX_U_EVANSFFD_EjhJobHist ON dbo.U_EVANSFFD_EjhJobHist (EjhEEID, EjhCoID, EjhRowNo);
+
+-- Update Years of service field.
+UPDATE ejh
+	SET EjhYearsOfService = DATEDIFF(YEAR, EjhJobEffDate, EjhLeadJobEffDate)
+FROM dbo.U_EVANSFFD_EjhJobHist ejh
+WHERE EjhEmplStatus = 'A'
+AND EjhLeadEmplStatus = 'T'
+
 
 select distinct '091509' drvPlanID
 ,eepssn drvSSN
@@ -283,9 +342,10 @@ select distinct '091509' drvPlanID
 ,CASE 
 	WHEN EecUDField06 IS NOT NULL THEN convert (varchar(10),EecUDField06,112) 
 	WHEN EecDateOfOriginalHire = EecDateOfLastHire THEN FORMAT(EecDateOfLastHire, 'yyyyMMdd')
+	WHEN EecDateOfOriginalHire <> EecDateOfLastHire THEN DATEADD(YEAR, -(SELECT SUM(COALESCE(EjhYearsOfService, 0)) FROM dbo.U_EVANSFFD_EjhJobHist WITH (NOLOCK) WHERE EjhEEID = xEEID AND EjhCoID = xCoID), EecDateOfLastHire)
 END
 
-[drvVestingDate] -- (WC SR-SR-2020-00270504)
+[drvVestingDate] -- (WC 2020-00270504)
 ,'' drvFiller4
 --,case when EecDateOfLastHire=EecDateOfOriginalHire then CONVERT(varchar(10),eecDateofTermination,112) else '' end [drvTermDate]
 ,case when EecEmplStatus='T' then CONVERT(varchar(10),eecDateofTermination,112) else '' end [drvTermDate] -- DH 8.18.17 SF09508016 Corrected logic to report on terminations based on employee status.
