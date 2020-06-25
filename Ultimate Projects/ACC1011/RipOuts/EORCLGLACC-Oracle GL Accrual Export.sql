@@ -387,6 +387,7 @@ BEGIN
             ,drvSubSort = MAX(LEFT(RTRIM(LTRIM(vGLAcctNumber)), 3))
             ,drvSubSort2 = MAX(SUBSTRING(RTRIM(LTRIM(vGLAcctNumber)), 5, 4))
             ,drvSubSort3 = vGLAcctNumber
+			,drvAccrueBy = @Accrue
             -- standard fields above and additional driver fields below
             ,drvLedgerID = '300000001752245'
             ,drvPayDate = MAX(vPerControlDate)
@@ -428,6 +429,7 @@ BEGIN
             ,drvSubSort = MAX(LEFT(RTRIM(LTRIM(vGLAcctNumber)), 3))
             ,drvSubSort2 = MAX(SUBSTRING(RTRIM(LTRIM(vGLAcctNumber)), 5, 4))
             ,drvSubSort3 = vGLAcctNumber
+			,drvAccrueBy = @Accrue
             -- standard fields above and additional driver fields below
             ,drvLedgerID = '300000001752245'
             ,drvPayDate = MAX(vPerControlDate)
@@ -455,7 +457,7 @@ BEGIN
         INNER JOIN dbo.Company WITH (NOLOCK)
             ON vCoID = CmpCoID
         WHERE vPerControl BETWEEN @StartPerControl AND @EndPerCOntrol
-        AND vGLCodeType = 'EE'
+        AND vGLCodeType IN ('EE', 'DR')
         GROUP BY vGLAcctNumber, vOrigAcctType
         HAVING(SUM(CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN vDebitAmt * (CAST(@ExportFile AS FLOAT) / @Accrue) ELSE 0.00 END) <> 0.00
 			OR SUM(CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN vCreditAmt * (CAST(@ExportFile AS FLOAT) / @Accrue) ELSE 0.00 END) <> 0.00)
@@ -467,6 +469,7 @@ BEGIN
             ,drvSubSort = MAX(LEFT(RTRIM(LTRIM(vGLAcctNumber)), 3))
             ,drvSubSort2 = MAX(SUBSTRING(RTRIM(LTRIM(vGLAcctNumber)), 5, 4))
             ,drvSubSort3 = vGLAcctNumber
+			,drvAccrueBy = @Accrue
             -- standard fields above and additional driver fields below
             ,drvLedgerID = '300000001752245'
             ,drvPayDate = MAX(vPerControlDate)
@@ -493,7 +496,7 @@ BEGIN
         INNER JOIN dbo.Company WITH (NOLOCK)
             ON vCoID = CmpCoID
         WHERE vPerControl BETWEEN @StartPerControl AND @EndPerCOntrol
-        AND vGLCodeType = 'EE'
+        AND vGLCodeType IN ('EE', 'DR')
         GROUP BY vGLAcctNumber, vOrigAcctType
         HAVING(SUM(CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN vDebitAmt * (CAST(@ExportFile AS FLOAT) / @Accrue) ELSE 0.00 END) <> 0.00
 			OR SUM(CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN vCreditAmt * (CAST(@ExportFile AS FLOAT) / @Accrue) ELSE 0.00 END) <> 0.00)
@@ -517,10 +520,10 @@ ORDER BY AdfSetNumber, AdfFieldNumber;
 
 --Update Dates
 UPDATE dbo.AscExp
-    SET expLastStartPerControl = '202006121'
-       ,expStartPerControl     = '202006121'
-       ,expLastEndPerControl   = '202006129'
-       ,expEndPerControl       = '202006129'
+    SET expLastStartPerControl = '202005291'
+       ,expStartPerControl     = '202005291'
+       ,expLastEndPerControl   = '202005299'
+       ,expEndPerControl       = '202005299'
 WHERE expFormatCode = 'EORCLGLACC';
 
 **********************************************************************************/
