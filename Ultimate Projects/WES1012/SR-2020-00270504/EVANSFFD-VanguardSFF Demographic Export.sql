@@ -1,7 +1,3 @@
---====================
--- V1.0
---====================
-
 SET NOCOUNT ON;
 IF OBJECT_ID('U_EVANSFFD_SavePath') IS NOT NULL DROP TABLE [dbo].[U_EVANSFFD_SavePath];
 SELECT FormatCode svFormatCode, CfgName svCfgName, CfgValue svCfgValue INTO dbo.U_EVANSFFD_SavePath FROM dbo.U_dsi_Configuration WITH (NOLOCK) WHERE FormatCode = 'EVANSFFD' AND CfgName LIKE '%Path';
