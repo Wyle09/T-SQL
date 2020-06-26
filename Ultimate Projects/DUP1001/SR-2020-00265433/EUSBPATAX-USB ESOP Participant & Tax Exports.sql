@@ -719,7 +719,7 @@ Unemployment is always based on work in state location.  Very few exceptions.
 				CASE
 					--WHEN sit1.PthMultipleSit = 'Y' AND sit1.PthStateReciprocity = 'N' THEN sit1.PthSitStatePct * 100
 					WHEN sit1.PthMultipleSit = 'Y' AND sit1.PthStateReciprocity = 'Y' THEN sit2.PthResidentStatePct * 100
-					WHEN sit1.PthMultipleSit = 'Y' THEN sit2.PthWorkInStatePct * 100
+					WHEN sit1.PthMultipleSit = 'Y' THEN sit1.PthWorkInStatePct * 100
 					ELSE FitSit.PthSitSupTaxPercentOverBaseYTD * 100
 				END
 				ELSE FitSit.PthPitSupTaxPercentOverBaseYTD * 100
@@ -828,10 +828,10 @@ ORDER BY AdfSetNumber, AdfFieldNumber;
 
 --Update Dates
 UPDATE dbo.AscExp
-    SET expLastStartPerControl = '202006231'
-       ,expStartPerControl     = '202006231'
-       ,expLastEndPerControl   = '202006239'
-       ,expEndPerControl       = '202006239'
+    SET expLastStartPerControl = '202006261'
+       ,expStartPerControl     = '202006261'
+       ,expLastEndPerControl   = '202006269'
+       ,expEndPerControl       = '202006269'
 WHERE expFormatCode = 'EUSBPATAX';
 
 **********************************************************************************/
