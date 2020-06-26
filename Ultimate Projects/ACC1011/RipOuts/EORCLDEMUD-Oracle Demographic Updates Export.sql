@@ -568,11 +568,12 @@ FROM '\\US.SAAS\Ez\Public\ACC1011\Exports\Oracle\Appendix\Location Code Mapping
         ,drvPersonID = CONCAT(EecEmpNo, '_PERSON')
         ,drvNameFirst = EepNameFirst
         ,drvNameLast = EepNameLast
-        ,drvKnownAs = CASE
-		                  WHEN NULLIF(EepNameSuffix, '') IS NOT NULL AND EepNameSuffix <> 'Z' THEN CONCAT(EepNameLast, ', ', EepNameSuffix, ', ', EepNameFirst, ' ', LEFT(EepNameMiddle, 1))
-						  WHEN  NULLIF(EepNameMiddle, '') IS NOT NULL THEN CONCAT(EepNameLast, ', ', EepNameFirst, ' ', LEFT(EepNameMiddle, 1))
-						  ELSE CONCAT(EepNameLast, ', ', EepNameFirst)
-		              END
+        ,drvKnownAs = 
+			CASE
+		        WHEN NULLIF(EepNameSuffix, '') IS NOT NULL AND EepNameSuffix <> 'Z' THEN CONCAT(EepNameLast, ', ', EepNameSuffix, ', ', EepNameFirst, ' ', LEFT(EepNameMiddle, 1))
+				WHEN  NULLIF(EepNameMiddle, '') IS NOT NULL THEN CONCAT(EepNameLast, ', ', EepNameFirst, ' ', LEFT(EepNameMiddle, 1))
+				ELSE CONCAT(EepNameLast, ', ', EepNameFirst)
+		    END
     INTO dbo.U_EORCLDEMUD_drvTbl_Updates_PersonName_D12
     FROM dbo.U_EORCLDEMUD_EEList WITH (NOLOCK)
     JOIN dbo.EmpComp WITH (NOLOCK)
@@ -698,7 +699,7 @@ FROM '\\US.SAAS\Ez\Public\ACC1011\Exports\Oracle\Appendix\Location Code Mapping
         ,drvAssignmentName = CASE WHEN (EecJobChangeReason NOT IN ('100', '101') OR EecEmplStatus <> 'T') THEN 'E1' END
         ,drvDateOfLastHire = GETDATE()
         ,drvDateOfTermination = CASE WHEN EecEmplStatus = 'T' THEN GETDATE() + 1 END
-        ,drvPeriodOfServiceID = CONCAT(EecEmpNo, '_PERSON_RELATIONSHIP')
+        ,drvPeriodOfServiceID = CONCAT(EecEmpNo, '_PERSON_WORKRELATIONSHIP')
         ,drvPersonID = CONCAT(EecEmpNo, '_PERSON')
         ,drvBusinessUnitShortCode = MapbusinessUnit
         ,drvCompanyName = COALESCE(NULLIF(CmpCompanyDBAName, ''), CmpCompanyName)
@@ -759,7 +760,7 @@ FROM '\\US.SAAS\Ez\Public\ACC1011\Exports\Oracle\Appendix\Location Code Mapping
         -- standard fields above and additional driver fields below
         ,drvSourceID = CONCAT(EecEmpNo, '_PERSON_ASSIGNMENT')
 		,drvWorkTermsAssignmentID = CONCAT(EecEmpNo, '_WORKTERMS')
-		,drvPeriodOfServiceID = CONCAT(EecEmpNo, '_PERSON_RELATIONSHIP')
+		,drvPeriodOfServiceID = CONCAT(EecEmpNo, '_PERSON_WORKRELATIONSHIP')
 		,drvPersonID = CONCAT(EecEmpNo, '_PERSON')
 		,drvAssigmnetName = CASE WHEN (EecJobChangeReason NOT IN ('100', '101') OR EecEmplStatus <> 'T') THEN 'E1' END
         ,drvDateOfOriginalHire = GETDATE()
@@ -827,7 +828,7 @@ FROM '\\US.SAAS\Ez\Public\ACC1011\Exports\Oracle\Appendix\Location Code Mapping
         ,drvSubSort = Ee.EecEmpNo
         -- standard fields above and additional driver fields below
 		,drvSourceID = CONCAT(Ee.EecEmpNo, '_MGR_ASG')
-        ,drvAssignmentNumber = Ee.EecEmpNo
+        ,drvAssignmentNumber =CONCAT('E', RTRIM(LTRIM(Ee.EecEmpNo)))
         ,drvDateOfLastHire = GETDATE()
         ,drvDateOfTermination = CASE WHEN Ee.EecEmplStatus = 'T' THEN GETDATE() + 1 END
         ,drvJobDesc = 'LINE_MANAGER'
