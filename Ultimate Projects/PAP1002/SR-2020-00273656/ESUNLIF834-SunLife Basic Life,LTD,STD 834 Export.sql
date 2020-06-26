@@ -891,7 +891,7 @@ BEGIN
         ,drvDTP00_DateTime_300 = CASE WHEN BdmDedType IN ('STD', 'LTD') THEN 'DTP' END
         ,drvDTP01_DateTimeQualifier_300 = CASE WHEN BdmDedType IN ('STD', 'LTD') THEN '300' END
         ,drvDTP02_DateTimeFormatQual_300 = CASE WHEN BdmDedType IN ('STD', 'LTD') THEN 'D8' END
-        ,drvDTP03_DateTimePeriod_300 = CASE WHEN BdmDedType IN ('STD', 'LTD') THEN dbo.dsi_fnGetMinMaxDates('MAX',BdmBenStatusDate, @FileMinCovDate) END
+        ,drvDTP03_DateTimePeriod_300 = CASE WHEN BdmDedType IN ('STD', 'LTD') THEN dbo.dsi_fnGetMinMaxDates('MAX',BdmTvStartDate, @FileMinCovDate) END
         -- If drvDTP00_DateTime_303 = 'DTP', then Send DTP*303 Segment
         ,drvDTP00_DateTime_303 = CASE WHEN BdmDedType IN ('MED') THEN '' END
         ,drvDTP01_DateTimeQualifier_303 = CASE WHEN BdmDedType IN ('MED') THEN '303' END
