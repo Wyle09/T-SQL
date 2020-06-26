@@ -350,7 +350,7 @@ BEGIN
 				THEN PehCurAmt
 				ELSE 0.00 
 			END))
-		,PehHours = SUM(COALESCE(PehCurHrs, 0.00))
+		,PehHours = CONVERT(DECIMAL(15,2), SUM(COALESCE(PehCurHrs, 0.00)))
     INTO dbo.U_ETHOMASCMP_Current_PEarHist
     FROM dbo.PayReg WITH (NOLOCK)
     JOIN dbo.PEarHist WITH (NOLOCK)
