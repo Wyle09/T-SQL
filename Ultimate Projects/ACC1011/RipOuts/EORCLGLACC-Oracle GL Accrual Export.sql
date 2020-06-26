@@ -445,8 +445,8 @@ BEGIN
             ,drvSegment2 = MAX(SUBSTRING(RTRIM(LTRIM(vGLAcctNumber)), 5, 4))
             ,drvSegment3 = MAX(SUBSTRING(RTRIM(LTRIM(vGLAcctNumber)), 10, 5))
 			,drvSegment4 = MAX(RIGHT(RTRIM(LTRIM(vGLAcctNumber)), 4))
-            ,drvDebitAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vDebitAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / 14) END)))
-            ,drvCreditAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vCreditAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / 14) END)))
+            ,drvDebitAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vDebitAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / @Accrue) END)))
+            ,drvCreditAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vCreditAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / @Accrue) END)))
             ,drvReference1 = MAX(CONCAT('UltiPro - Payroll and Benefits: Year ', LEFT(vPerControl, 4), ',', 'Period ', SUBSTRING(vPerControl, 5, 2)))
             ,drvReference4 = MAX(CONCAT('PAYROL_', LEFT(vPerControl, 6)))
         INTO dbo.U_EORCLGLACC_drvTbl_D10
@@ -485,8 +485,8 @@ BEGIN
             ,drvSegment2 = '5121'
             ,drvSegment3 = '21501'
 			,drvSegment4 = '0000'
-            ,drvDebitAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vDebitAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / 14) END)) * -1)
-            ,drvCreditAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vCreditAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / 14) END)) * -1)
+            ,drvDebitAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vDebitAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / @Accrue) END)) * -1)
+            ,drvCreditAmnt = CONVERT(VARCHAR, CONVERT(DECIMAL(15,2), SUM(vCreditAmt) * (CASE WHEN ISNUMERIC(@ExportFile) = 1 THEN (CAST(@ExportFile AS DECIMAL(15,2)) / @Accrue) END)) * -1)
             ,drvReference1 = MAX(CONCAT('UltiPro - Payroll and Benefits: Year ', LEFT(vPerControl, 4), ',', 'Period ', SUBSTRING(vPerControl, 5, 2)))
             ,drvReference4 = MAX(CONCAT('PAYROL_', LEFT(vPerControl, 6)))
 		FROM dbo.U_EORCLGLACC_EEList WITH (NOLOCK)
