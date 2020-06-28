@@ -568,7 +568,7 @@ BEGIN
 		,PthMedCurTaxableWagesYTD = SUM(COALESCE(PthCurTaxableWages, 0.00))
 		,PthCurTaxAmt = SUM(COALESCE(PthCurTaxAmt, 0.00))
 		,PthTaxDescription = MAX(CONCAT(LEFT(RTRIM(LTRIM(PthTaxCode)), 2), '-', 'STATE'))
-		,PthTaxRate = SUM(COALESCE(SupTaxPercentOverBase, 0.00)) * 100
+		,PthTaxRate = SUM(COALESCE(PthCurTaxAmt, 0.00)) / SUM(COALESCE(PthCurTaxableWages, 0.00)) * 100
 		,PthTaxMax = 'N'
 		,PthRowNo = ROW_NUMBER() OVER(PARTITION BY PthEEID, PthCoID ORDER BY CASE PthIsResidentTaxCode WHEN 'Y' THEN 1 ELSE 2 END)
 		,PthSort = ROW_NUMBER() OVER(PARTITION BY PthEEID, PthCoID ORDER BY CASE PthIsResidentTaxCode WHEN 'Y' THEN 1 ELSE 2 END)
