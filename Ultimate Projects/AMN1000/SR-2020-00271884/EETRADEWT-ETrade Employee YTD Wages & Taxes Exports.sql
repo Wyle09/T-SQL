@@ -340,7 +340,7 @@ BEGIN
         ,PehCoID
         ,PehPayDate = MAX(PrgPayDate)
         ,PehCurAmtYTD = CONVERT(DECIMAL(15,2), SUM(COALESCE(PehCurAmt, 0.00)))
-        ,PehIsSuppWagesYTD = CONVERT(DECIMAL(15,2), SUM(CASE WHEN PehIsSuppWages = 'Y' THEN PehCurAmt ELSE 0.00 END))
+        ,PehIsSuppWagesYTD = CONVERT(DECIMAL(15,2), SUM(CASE WHEN (PehIsSuppWages = 'Y' OR PehEarnCode = 'GTL') AND PehEarnCode NOT IN ('DFMTX', 'DFRS', 'MVGNT', 'RHSTI') THEN PehCurAmt ELSE 0.00 END))
     INTO dbo.U_EETRADEWT_YTDWithHeld_PEarHist
     FROM dbo.PayReg WITH (NOLOCK)
     JOIN dbo.PEarHist WITH (NOLOCK)
@@ -568,7 +568,7 @@ BEGIN
 		,PthMedCurTaxableWagesYTD = SUM(COALESCE(PthCurTaxableWages, 0.00))
 		,PthCurTaxAmt = SUM(COALESCE(PthCurTaxAmt, 0.00))
 		,PthTaxDescription = MAX(CONCAT(LEFT(RTRIM(LTRIM(PthTaxCode)), 2), '-', 'STATE'))
-		,PthTaxRate = SUM(COALESCE(PthCurTaxAmt, 0.00)) / SUM(COALESCE(PthCurTaxableWages, 0.00)) * 100
+		,PthTaxRate = SUM(COALESCE(SupTaxPercentOverBase, 0.00)) * 100
 		,PthTaxMax = 'N'
 		,PthRowNo = ROW_NUMBER() OVER(PARTITION BY PthEEID, PthCoID ORDER BY CASE PthIsResidentTaxCode WHEN 'Y' THEN 1 ELSE 2 END)
 		,PthSort = ROW_NUMBER() OVER(PARTITION BY PthEEID, PthCoID ORDER BY CASE PthIsResidentTaxCode WHEN 'Y' THEN 1 ELSE 2 END)
