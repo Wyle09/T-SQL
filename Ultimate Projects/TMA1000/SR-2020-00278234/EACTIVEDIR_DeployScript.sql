@@ -423,7 +423,7 @@ BEGIN
         ,drvDeptCode =eecorglvl2
         --,drvPreferredName = Emp.EepNamePreferred -- (WC 2020-00278234)
 		-- (WC 2020-00278234) added new fields:
-		,drvUltiUserName = ''
+		,drvUltiUserName = SusUserName
 		,drvEEID2 = xEEID
 		,drvFunctionCode = EecOrgLvl4
 		,drvFunction = org4.OrgDesc
@@ -450,6 +450,8 @@ BEGIN
 	LEFT JOIN dbo.OrgLevel org4 WITH (NOLOCK)
 		ON org4.OrgCode = EecOrgLvl4 
 		AND org4.OrgLvl = 4
+	LEFT JOIN vw_rbsUserFinder WITH (NOLOCK)
+		ON SucEEID = xEEID
     LEFT JOIN dbo.U_EACTIVEDIR_Supervisors on empeeid = xeeid and empcoid = xcoid
     WHERE EecEmplStatus <> 'T' OR (@ExportCode NOT LIKE 'FULL%' AND EecEmplStatus= 'T' AND EecTermReason <> 'TRO')
 
