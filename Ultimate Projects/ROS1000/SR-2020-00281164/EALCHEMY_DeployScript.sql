@@ -18,7 +18,7 @@ DELETE [dbo].[U_dsi_Configuration] FROM [dbo].[U_dsi_Configuration] WHERE Format
 DELETE [dbo].[AscExp] FROM [dbo].[AscExp] WHERE expFormatCode = 'EALCHEMY';
 DELETE [dbo].[AscDefF] FROM [dbo].[AscDefF] JOIN AscDefH ON AdfHeaderSystemID = AdhSystemID WHERE AdhFormatCode = 'EALCHEMY';
 DELETE [dbo].[AscDefH] FROM [dbo].[AscDefH] WHERE AdhFormatCode = 'EALCHEMY';
-INSERT INTO [dbo].[AscDefH] (AdhAccrCodesUsed,AdhAggregateAtLevel,AdhAuditStaticFields,AdhChildTable,AdhClientTableList,AdhCustomDLLFileName,AdhDedCodesUsed,AdhDelimiter,AdhEarnCodesUsed,AdhEEIdentifier,AdhEndOfRecord,AdhEngine,AdhFileFormat,AdhFormatCode,AdhFormatName,AdhFundCodesUsed,AdhImportExport,AdhInputFormName,AdhIsAuditFormat,AdhIsSQLExport,AdhModifyStamp,AdhOutputMediaType,AdhPreProcessSQL,AdhRecordSize,AdhSortBy,AdhSysFormat,AdhSystemID,AdhTaxCodesUsed,AdhYearStartFixedDate,AdhYearStartOption,AdhRespectZeroPayRate,AdhCreateTClockBatches,AdhThirdPartyPay) VALUES ('N','C','Y','0','','','N','','N','','013010','EMPEXPORT','CDE','EALCHEMY','Alchemy Export File','N','E','FORM_EMPEXPORT','N','C',dbo.fn_GetTimedKey(),'D','dbo.dsi_sp_Switchbox_v2','2000','S','N','EALCHEMY00Z0','N','Jan  1 1900 12:00AM','C','N',NULL,'N');
+INSERT INTO [dbo].[AscDefH] (AdhAccrCodesUsed,AdhAggregateAtLevel,AdhAuditStaticFields,AdhChildTable,AdhClientTableList,AdhCustomDLLFileName,AdhDedCodesUsed,AdhDelimiter,AdhEarnCodesUsed,AdhEEIdentifier,AdhEndOfRecord,AdhEngine,AdhFileFormat,AdhFormatCode,AdhFormatName,AdhFundCodesUsed,AdhImportExport,AdhInputFormName,AdhIsAuditFormat,AdhIsSQLExport,AdhModifyStamp,AdhOutputMediaType,AdhPreProcessSQL,AdhRecordSize,AdhSortBy,AdhSysFormat,AdhSystemID,AdhTaxCodesUsed,AdhYearStartFixedDate,AdhYearStartOption,AdhRespectZeroPayRate,AdhCreateTClockBatches,AdhThirdPartyPay) VALUES ('N','C','Y','0','','','N','','N','','013010','EMPEXPORT','CDE','EALCHEMY','Alchemy Export File','N','E','FORM_EMPEXPORT','N','C',dbo.fn_GetTimedKey(),'D','dbo.dsi_sp_Switchbox_v2','2000','S','N','EALCHEMY00Z0','N','Jan  1 1900 02:00AM','C','N',NULL,'N');
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvNameLast"','1','(''UA''=''T|'')','EALCHEMY00Z0','50','D','10','1',NULL,'Last Nme',NULL,NULL);
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvNameFirst"','2','(''UA''=''T|'')','EALCHEMY00Z0','50','D','10','2',NULL,'First Nme',NULL,NULL);
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvUserName"','3','(''UA''=''T|'')','EALCHEMY00Z0','50','D','10','3',NULL,'username',NULL,NULL);
@@ -59,16 +59,17 @@ INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSy
 INSERT INTO [dbo].[AscDefF] (AdfExpression,AdfFieldNumber,AdfForCond,AdfHeaderSystemID,AdfLen,AdfRecType,AdfSetNumber,AdfStartPos,AdfTableName,AdfTargetField,AdfVariableName,AdfVariableType) VALUES ('"drvLanguage"','38','(''UA''=''T'')','EALCHEMY00Z0','50','D','10','38',NULL,'Language',NULL,NULL);
 DECLARE @UDENV varchar(3) = (SELECT CASE WHEN LEFT(@@SERVERNAME,3) IN ('WP1','WP2','WP3','WP4','WP5') THEN 'WP' ELSE LEFT(@@SERVERNAME,3) END);
 DECLARE @ARNUM varchar(12) = (SELECT RTRIM(CmmContractNo) FROM dbo.CompMast);
-INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompanies,expCOIDList,expDateOrPerControl,expDateTimeRangeEnd,expDateTimeRangeStart,expDesc,expEndPerControl,expEngine,expExportCode,expExported,expFormatCode,expGLCodeTypes,expGLCodeTypesAll,expGroupBy,expLastEndPerControl,expLastPayDate,expLastPeriodEndDate,expLastStartPerControl,expNoOfRecords,expSelectByField,expSelectByList,expStartPerControl,expSystemID,expTaxCalcGroupID,expUser,expIEXSystemID) VALUES ('File Name is Auto Generated',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Alchemy Export','202001239','EMPEXPORT','ONDEMAND',NULL,'EALCHEMY',NULL,NULL,NULL,'202001239','Jan 23 2020  3:22PM','Jan 23 2020  3:22PM','202001231',NULL,'','','202001231',dbo.fn_GetTimedKey(),NULL,'ULTI',NULL);
-INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompanies,expCOIDList,expDateOrPerControl,expDateTimeRangeEnd,expDateTimeRangeStart,expDesc,expEndPerControl,expEngine,expExportCode,expExported,expFormatCode,expGLCodeTypes,expGLCodeTypesAll,expGroupBy,expLastEndPerControl,expLastPayDate,expLastPeriodEndDate,expLastStartPerControl,expNoOfRecords,expSelectByField,expSelectByList,expStartPerControl,expSystemID,expTaxCalcGroupID,expUser,expIEXSystemID) VALUES ('File Name is Auto Generated',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Alchemy Export Sched1','202001239','EMPEXPORT','SCHED1',NULL,'EALCHEMY',NULL,NULL,NULL,'202001239','Jan 23 2020  3:22PM','Jan 23 2020  3:22PM','202001231',NULL,'','','202001231',dbo.fn_GetTimedKey(),NULL,'ULTI',NULL);
-INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompanies,expCOIDList,expDateOrPerControl,expDateTimeRangeEnd,expDateTimeRangeStart,expDesc,expEndPerControl,expEngine,expExportCode,expExported,expFormatCode,expGLCodeTypes,expGLCodeTypesAll,expGroupBy,expLastEndPerControl,expLastPayDate,expLastPeriodEndDate,expLastStartPerControl,expNoOfRecords,expSelectByField,expSelectByList,expStartPerControl,expSystemID,expTaxCalcGroupID,expUser,expIEXSystemID) VALUES ('File Name is Auto Generated',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Alchemy Export Sched2','202001239','EMPEXPORT','SHCED2',NULL,'EALCHEMY',NULL,NULL,NULL,'202001239','Jan 23 2020  3:22PM','Jan 23 2020  3:22PM','202001231',NULL,'','','202001231',dbo.fn_GetTimedKey(),NULL,'ULTI',NULL);
+INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompanies,expCOIDList,expDateOrPerControl,expDateTimeRangeEnd,expDateTimeRangeStart,expDesc,expEndPerControl,expEngine,expExportCode,expExported,expFormatCode,expGLCodeTypes,expGLCodeTypesAll,expGroupBy,expLastEndPerControl,expLastPayDate,expLastPeriodEndDate,expLastStartPerControl,expNoOfRecords,expSelectByField,expSelectByList,expStartPerControl,expSystemID,expTaxCalcGroupID,expUser,expIEXSystemID) VALUES ('File Name is Auto Generated',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Alchemy Export OnDemand','202001239','EMPEXPORT','ONDEMAND',NULL,'EALCHEMY',NULL,NULL,NULL,'202001239','Jan 23 2020  3:22PM','Jan 23 2020  3:22PM','202001231',NULL,'','','202001231',dbo.fn_GetTimedKey(),NULL,'ULTI',NULL);
+INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompanies,expCOIDList,expDateOrPerControl,expDateTimeRangeEnd,expDateTimeRangeStart,expDesc,expEndPerControl,expEngine,expExportCode,expExported,expFormatCode,expGLCodeTypes,expGLCodeTypesAll,expGroupBy,expLastEndPerControl,expLastPayDate,expLastPeriodEndDate,expLastStartPerControl,expNoOfRecords,expSelectByField,expSelectByList,expStartPerControl,expSystemID,expTaxCalcGroupID,expUser,expIEXSystemID) VALUES ('File Name is Auto Generated',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Alchemy Export Scheduled','202001239','EMPEXPORT','SCHEDULED',NULL,'EALCHEMY',NULL,NULL,NULL,'202001239','Jan 23 2020  3:22PM','Jan 23 2020  3:22PM','202001231',NULL,'','','202001231',dbo.fn_GetTimedKey(),NULL,'ULTI',NULL);
+INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompanies,expCOIDList,expDateOrPerControl,expDateTimeRangeEnd,expDateTimeRangeStart,expDesc,expEndPerControl,expEngine,expExportCode,expExported,expFormatCode,expGLCodeTypes,expGLCodeTypesAll,expGroupBy,expLastEndPerControl,expLastPayDate,expLastPeriodEndDate,expLastStartPerControl,expNoOfRecords,expSelectByField,expSelectByList,expStartPerControl,expSystemID,expTaxCalcGroupID,expUser,expIEXSystemID) VALUES ('File Name is Auto Generated',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Alchemy Export Test','202001239','EMPEXPORT','TEST',NULL,'EALCHEMY',NULL,NULL,NULL,'202001239','Jan 23 2020  3:22PM','Jan 23 2020  3:22PM','202001231',NULL,'','','202001231',dbo.fn_GetTimedKey(),NULL,'ULTI',NULL);
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','EEList','V','Y');
-INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','ExportPath','V','\\us.saas\EZ\Public\ROS1000\Exports_Test\Alchemy\');
+INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','ExportPath','V','\\us.saas\n0\data_exchange\ROS1000\Exports\');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','InitialSort','C','drvInitialSort');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','OEPath','V','');
-INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','OnDemandPath','V','\\us.saas\EZ\Public\ROS1000\Exports_Test\Alchemy\');
-INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','Testing','V','Y');
-INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','UDESPath','C','\\us.saas\n0\data_exchange\ROS1000\Exports\');
+INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','OnDemandPath','V','\\us.saas\n0\data_exchange\ROS1000\Exports\');
+INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','TestPath','V','\\us.saas\N2\Public\ROS1000\Exports\Alchemy\');
+INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','Testing','V','N');
+INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','UDESPath','V','\\us.saas\n0\data_exchange\ROS1000\Exports\');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','UseFileName','V','N');
 UPDATE dbo.U_dsi_Configuration SET CfgValue = '\\us.saas\' + LEFT(@UDENV,2) + '\Public\' + @ARNUM + '\Exports\' WHERE FormatCode = 'EALCHEMY' AND CfgName = 'ExportPath' AND CfgValue IS NULL;
 UPDATE dbo.U_dsi_Configuration SET CfgValue = svCfgValue FROM dbo.U_EALCHEMY_SavePath WHERE CfgName = svCfgName AND FormatCode = svFormatCode AND svCfgValue IS NOT NULL;
@@ -155,6 +156,7 @@ EXEC msdb..usg_set_job_owner @job_name = '', @set_owner_to_self = 1;
 Execute Export
 --------------
 EXEC dbo.dsi_sp_TestSwitchbox_v2 'EALCHEMY', 'ONDEMAND';
+EXEC dbo.dsi_sp_TestSwitchbox_v2 'EALCHEMY', 'TEST';
 
 EXEC dbo._dsi_usp_ExportRipOut @FormatCode = 'EALCHEMY', @AllObjects = 'Y', @IsWeb = 'N'
 **********************************************************************************/
@@ -294,7 +296,7 @@ BEGIN
         ,drvEmpID = EecEmpNo
         ,drvCompanyCode = CmpCompanyCode
         ,drvArchived = CASE WHEN EecEmplStatus = 'T' THEN '1' ELSE '0' END
-        ,drvGroups = CONCAT(RTRIM(LTRIM(EecJobCode)), ':', RTRIM(LTRIM(EecOrgLvl3))) -- (WC 2020-00281164)
+        ,drvGroups = CASE WHEN NULLIF(EecOrgLvl3, '') IS NOT NULL THEN CONCAT(RTRIM(LTRIM(EecJobCode)), ':', RTRIM(LTRIM(EecOrgLvl3))) ELSE EecJobCode END -- (WC 2020-00281164)
         ,drvSSN = RIGHT(RTRIM(LTRIM(eepSSN)), 4)
         ,drvDateOfLastHire = EecDateOfLastHire
         ,drvDateOfTermination = CASE WHEN EecEmplStatus = 'T' THEN EecDateOfTermination END
@@ -398,21 +400,21 @@ ORDER BY AdfSetNumber, AdfFieldNumber;
 
 --Update Dates
 UPDATE dbo.AscExp
-    SET expLastStartPerControl = '201910011'
-       ,expStartPerControl     = '201910011'
-       ,expLastEndPerControl   = '202001239'
-       ,expEndPerControl       = '202001239'
+    SET expLastStartPerControl = '202006011'
+       ,expStartPerControl     = '202006011'
+       ,expLastEndPerControl   = '202006299'
+       ,expEndPerControl       = '202006299'
 WHERE expFormatCode = 'EALCHEMY';
 
 
 
-    --------JOB NAME: Alchemy Export File  (EALCHEMY) - Daily, 12:00AM ET--------
+    --------JOB NAME: Alchemy Export File  (EALCHEMY) - Daily, 02:00AM ET--------
     --Copy and paste this in environment to create job script
 
     BEGIN TRANSACTION
     DECLARE @ReturnCode INT, @JobName varchar(100), @dbName varchar(50)
     SELECT @ReturnCode = 0
-    SELECT @JobName = RTRIM(REPLACE(DB_NAME(),'ULTIPRO_','')) + ' - Alchemy Export File  (EALCHEMY) - Daily, 12:00AM ET'
+    SELECT @JobName = RTRIM(REPLACE(DB_NAME(),'ULTIPRO_','')) + ' - Alchemy Export File  (EALCHEMY) - Daily, 02:00AM ET'
     SELECT @dbname = RTRIM(DB_NAME())
 
     -- Job Params
@@ -487,7 +489,7 @@ WHERE expFormatCode = ''EALCHEMY''
     IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
     EXEC @ReturnCode = msdb.dbo.sp_update_job @job_id = @jobId, @start_step_id = 1
     IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback
-    EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'Daily, 12:00AM ET',
+    EXEC @ReturnCode = msdb.dbo.sp_add_jobschedule @job_id=@jobId, @name=N'Daily, 02:00AM ET',
             @enabled=1, 
             @freq_type=4, 
             @freq_interval=1,  
@@ -501,8 +503,8 @@ WHERE expFormatCode = ''EALCHEMY''
             @active_end_time=235959;
     IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback;
     EXEC @ReturnCode = msdb.dbo.sp_add_jobserver @job_id = @jobId, @server_name = N'(local)';
-    IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback;
-    EXEC msdb..usg_set_job_owner @job_id = @jobId, @set_owner_to_self = 0;
+    --IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback;
+    --EXEC msdb..usg_set_job_owner @job_id = @jobId, @set_owner_to_self = 0;
     IF (@@ERROR <> 0 OR @ReturnCode <> 0) GOTO QuitWithRollback;
     COMMIT TRANSACTION
     GOTO EndSave;
