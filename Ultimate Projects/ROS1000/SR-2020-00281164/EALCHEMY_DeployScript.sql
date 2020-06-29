@@ -65,6 +65,7 @@ INSERT INTO [dbo].[AscExp] (expAscFileName,expAsOfDate,expCOID,expCOIDAllCompani
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','EEList','V','Y');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','ExportPath','V','\\us.saas\n0\data_exchange\ROS1000\Exports\');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','InitialSort','C','drvInitialSort');
+INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','SubSort','C','drvSubSort');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','OEPath','V','');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','OnDemandPath','V','\\us.saas\n0\data_exchange\ROS1000\Exports\');
 INSERT INTO [dbo].[U_dsi_Configuration] (FormatCode,CfgName,CfgType,CfgValue) VALUES ('EALCHEMY','TestPath','V','\\us.saas\N2\Public\ROS1000\Exports\Alchemy\');
@@ -286,7 +287,8 @@ BEGIN
     SELECT DISTINCT
          drvEEID = xEEID
         ,drvCoID = xCoID
-        ,drvInitialSort = EecDateOfLastHire
+        ,drvInitialSort = EecEmpNo
+		,drvSubSort = EecDateOfLastHire
         -- standard fields above and additional driver fields below
         ,drvNameLast = EepNameLast
         ,drvNameFirst = EepNameFirst
